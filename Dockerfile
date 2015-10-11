@@ -17,6 +17,6 @@ RUN chmod +x start.sh
 RUN useradd -u 1000 -M -s /bin/false -G www-data raccoon
 
 EXPOSE 80
-VOLUME ["/var/www/html", "/var/log"]
+VOLUME ["/var/www/html", "/var/log/apache2"]
 WORKDIR /
 CMD ["/start.sh"]
