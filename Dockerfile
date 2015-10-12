@@ -13,6 +13,7 @@ RUN rm -rf /var/lib/apt/lists/*
 
 ADD start.sh /start.sh
 ADD php.ini /etc/php5/apache2/
+ADD envvars /etc/apache2/
 RUN chmod +x start.sh
 RUN useradd -u 1000 -M -s /bin/false -G www-data raccoon
 
