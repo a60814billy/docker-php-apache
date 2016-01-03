@@ -1,5 +1,5 @@
 #!/bin/bash
 
-TAG="php-apache"
+TAG="a60814billy/php-server"
 
 docker build -t ${TAG} .

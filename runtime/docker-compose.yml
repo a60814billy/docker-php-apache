@@ -1,0 +1,16 @@
+web-server:
+    image: a60814billy/php-server
+    ports:
+        - "80:80"
+    volumes:
+        - ./www:/var/www/html
+        - ./log:/var/log/apache2
+    links:
+        - mysql57:db
+
+mysql57:
+    image: mysql:5.7
+    environment:
+        - MYSQL_ROOT_PASSWORD=MYSQL_ROOT_PASSWORD
+    ports:
+        - "3306:3306"
